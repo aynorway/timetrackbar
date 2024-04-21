@@ -107,6 +107,7 @@ public class TimeTrackBar {
         public TimerTaskPanel(boolean isFirst) {
             super(new BorderLayout());
 
+            // 西部 +- Text 
             JPanel westPanel = new JPanel();
             JButton controlButton;
             if (isFirst) {
@@ -133,13 +134,15 @@ public class TimeTrackBar {
             westPanel.add(nameField);
             add(westPanel, BorderLayout.WEST);
 
-            // ProgressBar
+            // 中部 PBar
             progressBar = new JProgressBar();
             progressBar.setValue(0);
             progressBar.setPreferredSize(new Dimension(Integer.MAX_VALUE, 15));
             progressBar.setStringPainted(true);
             add(progressBar, BorderLayout.CENTER);
 
+
+            // 东部 input 隐藏btn 音乐btn 
             JPanel eastPanel = new JPanel();
 
             // 定义新的timeInputPanel
