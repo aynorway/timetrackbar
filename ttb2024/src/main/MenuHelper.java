@@ -1,3 +1,5 @@
+package main;
+
 import java.net.URI;
 import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JFrame;

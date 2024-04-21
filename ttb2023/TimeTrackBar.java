@@ -6,6 +6,9 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import javax.swing.plaf.FontUIResource;
 
+import src.main.MenuHelper;
+import src.main.UIManagerHelper;
+
 import java.awt.event.MouseEvent;
 
 import java.awt.*;

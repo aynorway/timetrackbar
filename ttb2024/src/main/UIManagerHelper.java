@@ -1,3 +1,4 @@
+package main;
 // UIManagerHelper.java
 import javax.swing.UIManager;
 import javax.swing.plaf.FontUIResource;
