@@ -8,6 +8,6 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "—————————————— \n Hello ttbm! \n——————————————" );
+        System.out.println( "—————————————— \n Hello ttbm 模板! \n——————————————" );
     }
 }
