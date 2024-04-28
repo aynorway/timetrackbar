@@ -32,6 +32,6 @@ public class App {
         // 设置声音管理
         AudioManager.setupAudio();
 
-        System.out.println("Application started successfully. ----- Current Time: " + formattedDateTime + "\n——————————————");
+        System.out.println("App started successfully. ----- Current Time: " + formattedDateTime + "\n——————————————");
     }
 }
