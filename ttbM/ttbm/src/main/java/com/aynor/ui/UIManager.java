@@ -1,7 +1,8 @@
 // UI模块
 package com.aynor.ui;
 
-// import javax.swing.plaf.FontUIResource;
+import javax.swing.plaf.FontUIResource;
+import java.awt.Font;
 
 public class UIManager {
     public static void setupUI() {
@@ -10,7 +11,11 @@ public class UIManager {
         // 可能还包括初始化窗口、布局、控件等
 
         // 设置全局字体
-        // UIManagerHelper.setDefaultUIFont(new FontUIResource("Serif", Font.PLAIN, 12));
+        FontUIResource f = new FontUIResource("Serif", Font.PLAIN, 12);
+        UIFontManager.setDefaultUIFont(f);
+
+        // 打印字体信息
+        System.out.println("--- \n Font set to: \n " + f.getFontName() + ", Style: " + f.getStyle() + ", Size: " + f.getSize() + "\n---");
 
         // 创建并显示主窗体
         MainFrame mainFrame = new MainFrame();
