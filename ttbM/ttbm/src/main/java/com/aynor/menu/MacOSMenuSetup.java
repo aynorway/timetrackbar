@@ -1,8 +1,8 @@
 package com.aynor.menu;
 
 import javax.swing.JFrame;
-import javax.swing.JMenuBar;
-import javax.swing.JMenu;
+// import javax.swing.JMenuBar;
+// import javax.swing.JMenu;
 
 public class MacOSMenuSetup implements MenuSetup {
     @Override
