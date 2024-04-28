@@ -16,6 +16,7 @@ public class MainFrame {
     private JPanel taskPanel;
 
     public MainFrame() {
+        System.out.println("--- \n 设置 MainFrame UI...\n---");
         setupMainFrame();
         setupTaskPanel();
         setupMenu();
@@ -24,7 +25,7 @@ public class MainFrame {
     private void setupMainFrame() {
         mainFrame = new JFrame("TimeTrackBar Application");
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
+
         mainFrame.setSize(900, 70); // 设置窗口大小
         mainFrame.setLocationRelativeTo(null); // 居中显示
     }
@@ -36,9 +37,12 @@ public class MainFrame {
     }
 
     private void setupMenu() {
-        // MenuSetup menuSetup = System.getProperty("os.name").toLowerCase().contains("mac") ?
-        //                       new MacOSMenuSetup() : new WindowsMenuSetup();
+        // MenuSetup menuSetup =
+        // System.getProperty("os.name").toLowerCase().contains("mac") ?
+        // new MacOSMenuSetup() : new WindowsMenuSetup();
         // menuSetup.setupMenu(mainFrame);
+
+        System.out.println("--- \n 设置 setupMenu UI...\n---");
 
         MenuSetup menuSetup;
         String os = System.getProperty("os.name").toLowerCase();

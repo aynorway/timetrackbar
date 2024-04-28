@@ -12,7 +12,7 @@ public class WindowsMenuSetup implements MenuSetup {
         // menuBar.add(fileMenu);
         // mainFrame.setJMenuBar(menuBar);
 
-        System.out.println("---\n Operating System: " + System.getProperty("os.name") + "\n---");
+        System.out.println("---\n Operating System: \n " + System.getProperty("os.name") + "\n---");
 
         // 使用 CommonMenuSetup 类来设置菜单
         CommonMenuSetup.setupCommonMenu(mainFrame);
