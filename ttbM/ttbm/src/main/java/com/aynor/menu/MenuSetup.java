@@ -3,7 +3,7 @@ package com.aynor.menu;
 import javax.swing.JFrame;
 
 // 菜单设置接口
-// 这个接口定义了一个 setupMenu 方法，任何实现这个接口的类都需要提供具体的菜单设置逻辑。
+// 这是一个接口文件，定义了菜单设置的方法，供不同的操作系统实现使用。
 public interface MenuSetup {
     void setupMenu(JFrame mainFrame);
 }

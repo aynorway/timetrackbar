@@ -6,6 +6,10 @@ import javax.swing.JPanel;
 
 import java.awt.BorderLayout;
 
+import com.aynor.menu.MacOSMenuSetup;
+import com.aynor.menu.MenuSetup;
+import com.aynor.menu.WindowsMenuSetup;
+
 // 主窗体类 
 public class MainFrame {
     private JFrame mainFrame;
@@ -14,7 +18,7 @@ public class MainFrame {
     public MainFrame() {
         setupMainFrame();
         setupTaskPanel();
-        // setupMenu();
+        setupMenu();
     }
 
     private void setupMainFrame() {
@@ -30,11 +34,11 @@ public class MainFrame {
         mainFrame.add(taskPanel, BorderLayout.PAGE_START);
     }
 
-    // private void setupMenu() {
-    //     MenuSetup menuSetup = System.getProperty("os.name").toLowerCase().contains("mac") ?
-    //                           new MacOSMenuSetup() : new WindowsMenuSetup();
-    //     menuSetup.setupMenu(mainFrame);
-    // }
+    private void setupMenu() {
+        MenuSetup menuSetup = System.getProperty("os.name").toLowerCase().contains("mac") ?
+                              new MacOSMenuSetup() : new WindowsMenuSetup();
+        menuSetup.setupMenu(mainFrame);
+    }
 
     public void show() {
         mainFrame.setVisible(true);
