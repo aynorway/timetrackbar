@@ -1,6 +1,6 @@
 package com.aynor.core;
 
-import com.aynor.ui.UIManager;
+import com.aynor.ui.UIManagerSetup;
 import com.aynor.audio.AudioManager;
 import com.aynor.menu.MenuManager;
 import com.aynor.time.TimeManager;
@@ -24,7 +24,7 @@ public class App {
         System.out.println("——————————————\n Hello ttbm ! ----- Current Time: " + formattedDateTime + "\n——————————————");
 
         // 调用 UI 设置
-        UIManager.setupUI();
+        UIManagerSetup.setupUI();
         // 初始化菜单
         MenuManager.initializeMenu();
         // 设置时间管理

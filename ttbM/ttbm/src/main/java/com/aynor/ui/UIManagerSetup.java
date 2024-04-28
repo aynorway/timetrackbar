@@ -4,7 +4,7 @@ package com.aynor.ui;
 import javax.swing.plaf.FontUIResource;
 import java.awt.Font;
 
-public class UIManager {
+public class UIManagerSetup {
     public static void setupUI() {
         // 设置用户界面的逻辑
         System.out.println("Setting up UI...\n——————————————");
