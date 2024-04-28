@@ -6,6 +6,7 @@ import javax.swing.JPanel;
 
 import java.awt.BorderLayout;
 
+// 主窗体类 
 public class MainFrame {
     private JFrame mainFrame;
     private JPanel taskPanel;
