@@ -23,6 +23,8 @@ public class MainFrame {
     }
 
     private void setupMainFrame() {
+        System.out.println("--- \n 设置 setupMainFrame UI...\n---");
+
         mainFrame = new JFrame("TimeTrackBar Application");
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -31,17 +33,14 @@ public class MainFrame {
     }
 
     private void setupTaskPanel() {
+        System.out.println("--- \n 设置 setupTaskPanel UI...\n---");
+
         taskPanel = new JPanel();
         taskPanel.setLayout(new BoxLayout(taskPanel, BoxLayout.Y_AXIS));
         mainFrame.add(taskPanel, BorderLayout.PAGE_START);
     }
 
     private void setupMenu() {
-        // MenuSetup menuSetup =
-        // System.getProperty("os.name").toLowerCase().contains("mac") ?
-        // new MacOSMenuSetup() : new WindowsMenuSetup();
-        // menuSetup.setupMenu(mainFrame);
-
         System.out.println("--- \n 设置 setupMenu UI...\n---");
 
         MenuSetup menuSetup;
@@ -52,8 +51,7 @@ public class MainFrame {
             menuSetup = new WindowsMenuSetup();
         } else {
             // 对于其他未知操作系统，可能不提供特定的菜单设置
-            menuSetup = frame -> {
-            }; // No-op
+            menuSetup = frame -> {}; 
         }
         menuSetup.setupMenu(mainFrame);
     }
