@@ -11,7 +11,7 @@ import com.aynor.menu.menusetup.MenuSetup;
 import com.aynor.menu.menusetup.WindowsMenuSetup;
 
 // 主窗体类 
-public class MainFrame {
+public class MainFrame extends JFrame{
     private JFrame mainFrame;
     private JPanel taskPanel;
 
@@ -40,6 +40,7 @@ public class MainFrame {
         mainFrame.add(taskPanel, BorderLayout.PAGE_START);
     }
 
+    // 调用 MenuSetup 
     private void setupMenu() {
         System.out.println("--- \n 设置 setupMenu UI...\n---");
 
@@ -59,4 +60,6 @@ public class MainFrame {
     public void show() {
         mainFrame.setVisible(true);
     }
+
+
 }
