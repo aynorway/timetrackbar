@@ -1,4 +1,4 @@
-package com.aynor.ui;
+package com.aynor.ui.mainframe;
 
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
@@ -6,9 +6,9 @@ import javax.swing.JPanel;
 
 import java.awt.BorderLayout;
 
-import com.aynor.menu.MacOSMenuSetup;
-import com.aynor.menu.MenuSetup;
-import com.aynor.menu.WindowsMenuSetup;
+import com.aynor.menu.menusetup.MacOSMenuSetup;
+import com.aynor.menu.menusetup.MenuSetup;
+import com.aynor.menu.menusetup.WindowsMenuSetup;
 
 // 主窗体类 
 public class MainFrame {

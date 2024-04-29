@@ -2,6 +2,9 @@
 package com.aynor.ui;
 
 import javax.swing.plaf.FontUIResource;
+
+import com.aynor.ui.mainframe.MainFrame;
+
 import java.awt.Font;
 
 public class UIManagerSetup {

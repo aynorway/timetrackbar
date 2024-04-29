@@ -1,4 +1,4 @@
-package com.aynor.menu;
+package com.aynor.menu.menusetup;
 
 import javax.swing.JFrame;
 
