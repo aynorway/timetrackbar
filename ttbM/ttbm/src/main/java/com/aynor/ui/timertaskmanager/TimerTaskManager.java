@@ -7,29 +7,29 @@ import javax.swing.JPanel;
 
 
 public class TimerTaskManager implements TimerTaskListener {
-    private MainFrame wdMainFrame;
-    private JPanel wdTaskPanel;
+    private MainFrame mainFrame;
+    private JPanel taskPanel;
 
     public TimerTaskManager(MainFrame mainFrame, JPanel taskPanel) {
-        this.wdMainFrame = mainFrame;
-        this.wdTaskPanel = taskPanel;
+        this.mainFrame = mainFrame;
+        this.taskPanel = taskPanel;
     }
 
     // 要确保 MainFrame.java 继承 extends JFrame 
     @Override
     public void addNewTimerTask(boolean isFirst) {
         TimerTaskPanel timerTask = new TimerTaskPanel();
-        wdTaskPanel.add(timerTask);
-        wdMainFrame.setSize(900, wdMainFrame.getHeight() + 45);
-        wdMainFrame.revalidate();
-        wdMainFrame.repaint();
+        taskPanel.add(timerTask);
+        mainFrame.setSize(900, mainFrame.getHeight() + 45);
+        mainFrame.revalidate();
+        mainFrame.repaint();
     }
 
     @Override
     public void removeTimerTask(TimerTaskPanel timerTask) {
-        wdTaskPanel.remove(timerTask);
-        wdMainFrame.setSize(900, wdMainFrame.getHeight() - 45);
-        wdMainFrame.revalidate();
-        wdMainFrame.repaint();
+        taskPanel.remove(timerTask);
+        mainFrame.setSize(900, mainFrame.getHeight() - 45);
+        mainFrame.revalidate();
+        mainFrame.repaint();
     }
 }
