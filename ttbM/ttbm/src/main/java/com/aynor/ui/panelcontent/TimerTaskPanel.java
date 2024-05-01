@@ -32,7 +32,6 @@ public class TimerTaskPanel extends JPanel {
         this.add(westPanel, BorderLayout.WEST);
         this.add(centerPanel, BorderLayout.CENTER);
     }
-    
 
     // 可以添加更多的方法来对子面板进行操作或更新
 }
