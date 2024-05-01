@@ -1,5 +1,11 @@
 package com.aynor.ui.panelcontent.east;
 
-public class EastPanel {
-    
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class EastPanel extends JPanel {
+    public EastPanel() {
+        JButton button = new JButton("East Button");
+        this.add(button);
+    }
 }

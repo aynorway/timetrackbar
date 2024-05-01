@@ -1,6 +1,7 @@
+// APP 初始的 Basic MainFrame 及调用 panel 
 package com.aynor.ui.mainframe;
 
-import javax.swing.BoxLayout;
+// import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
@@ -8,12 +9,13 @@ import java.awt.BorderLayout;
 import com.aynor.menu.menusetup.MacOSMenuSetup;
 import com.aynor.menu.menusetup.MenuSetup;
 import com.aynor.menu.menusetup.WindowsMenuSetup;
+import com.aynor.ui.panelcontent.TimerTaskPanel;
 
 // 主窗体类 
-public class MainFrame extends JFrame {
+public class BaseMainFrame extends JFrame {
     private JPanel taskPanel;
 
-    public MainFrame() {
+    public BaseMainFrame() {
         super("TimeTrackBar Application"); // 正确的super调用. super 调用父类构造器只能在子类构造器的第一行使用。
         System.out.println("--- \n 设置 MainFrame UI...\n---");
         setupMainFrame();
@@ -25,16 +27,15 @@ public class MainFrame extends JFrame {
         System.out.println("--- \n 设置 MainFrame UI...\n---");
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(900, 70); // 设置窗口大小
+        setSize(900, 170); // 设置窗口大小
         setLocationRelativeTo(null); // 居中显示
     }
 
     private void setupTaskPanel() {
         System.out.println("--- \n 设置 setupTaskPanel UI...\n---");
 
-        taskPanel = new JPanel();
-        taskPanel.setLayout(new BoxLayout(taskPanel, BoxLayout.Y_AXIS));
-        add(taskPanel, BorderLayout.PAGE_START); // 使用this.add也是可以的，this通常被省略
+        taskPanel = new TimerTaskPanel(); // 使用 TimerTaskPanel
+        add(taskPanel, BorderLayout.CENTER); // 使用this.add也是可以的，this通常被省略
     }
 
     // 调用 MenuSetup 

@@ -1,16 +1,16 @@
-// 管理是否事增加任务还是减少一个任务, 相对应的更改frame的操作 
+// TimerTaskManager.java 管理是否事增加任务还是减少一个任务, 相对应的增加活加少frame的size  
 package com.aynor.ui.timertaskmanager;
-import com.aynor.ui.mainframe.MainFrame;
+import com.aynor.ui.mainframe.BaseMainFrame;
 import com.aynor.ui.panelcontent.TimerTaskPanel;
 
 import javax.swing.JPanel;
 
 
 public class TimerTaskManager implements TimerTaskListener {
-    private MainFrame mainFrame;
+    private BaseMainFrame mainFrame;
     private JPanel taskPanel;
 
-    public TimerTaskManager(MainFrame mainFrame, JPanel taskPanel) {
+    public TimerTaskManager(BaseMainFrame mainFrame, JPanel taskPanel) {
         this.mainFrame = mainFrame;
         this.taskPanel = taskPanel;
     }

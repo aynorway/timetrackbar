@@ -1,5 +1,11 @@
 package com.aynor.ui.panelcontent.north;
 
-public class NorthPanel {
-    
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class NorthPanel extends JPanel {
+    public NorthPanel() {
+        JButton button = new JButton("North Button");
+        this.add(button);
+    }
 }

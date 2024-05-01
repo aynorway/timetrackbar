@@ -1,4 +1,4 @@
-// 这个接口连接 TimerTaskManager 
+// 这个TimerTaskListener.java 接口连接 TimerTaskManager.java 
 package com.aynor.ui.timertaskmanager;
 
 import com.aynor.ui.panelcontent.TimerTaskPanel;

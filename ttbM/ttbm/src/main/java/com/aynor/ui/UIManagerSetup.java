@@ -3,7 +3,7 @@ package com.aynor.ui;
 
 import javax.swing.plaf.FontUIResource;
 
-import com.aynor.ui.mainframe.MainFrame;
+import com.aynor.ui.mainframe.BaseMainFrame;
 
 import java.awt.Font;
 
@@ -21,7 +21,7 @@ public class UIManagerSetup {
         System.out.println("--- \n Font set to: \n " + f.getFontName() + ", Style: " + f.getStyle() + ", Size: " + f.getSize() + "\n---");
 
         // 创建并显示主窗体
-        MainFrame mainFrame = new MainFrame();
+        BaseMainFrame mainFrame = new BaseMainFrame();
         mainFrame.showFrame(); // 确保调用此方法
     }
 
