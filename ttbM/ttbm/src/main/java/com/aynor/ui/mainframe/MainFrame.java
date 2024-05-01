@@ -3,7 +3,6 @@ package com.aynor.ui.mainframe;
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
 import java.awt.BorderLayout;
 
 import com.aynor.menu.menusetup.MacOSMenuSetup;
@@ -11,11 +10,11 @@ import com.aynor.menu.menusetup.MenuSetup;
 import com.aynor.menu.menusetup.WindowsMenuSetup;
 
 // 主窗体类 
-public class MainFrame extends JFrame{
-    private JFrame mainFrame;
+public class MainFrame extends JFrame {
     private JPanel taskPanel;
 
     public MainFrame() {
+        super("TimeTrackBar Application"); // 正确的super调用. super 调用父类构造器只能在子类构造器的第一行使用。
         System.out.println("--- \n 设置 MainFrame UI...\n---");
         setupMainFrame();
         setupTaskPanel();
@@ -23,13 +22,11 @@ public class MainFrame extends JFrame{
     }
 
     private void setupMainFrame() {
-        System.out.println("--- \n 设置 setupMainFrame UI...\n---");
+        System.out.println("--- \n 设置 MainFrame UI...\n---");
 
-        mainFrame = new JFrame("TimeTrackBar Application");
-        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        mainFrame.setSize(900, 70); // 设置窗口大小
-        mainFrame.setLocationRelativeTo(null); // 居中显示
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(900, 70); // 设置窗口大小
+        setLocationRelativeTo(null); // 居中显示
     }
 
     private void setupTaskPanel() {
@@ -37,7 +34,7 @@ public class MainFrame extends JFrame{
 
         taskPanel = new JPanel();
         taskPanel.setLayout(new BoxLayout(taskPanel, BoxLayout.Y_AXIS));
-        mainFrame.add(taskPanel, BorderLayout.PAGE_START);
+        add(taskPanel, BorderLayout.PAGE_START); // 使用this.add也是可以的，this通常被省略
     }
 
     // 调用 MenuSetup 
@@ -54,12 +51,10 @@ public class MainFrame extends JFrame{
             // 对于其他未知操作系统，可能不提供特定的菜单设置
             menuSetup = frame -> {}; 
         }
-        menuSetup.setupMenu(mainFrame);
+        menuSetup.setupMenu(this); // 应该传递 this，因为 this 代表的是 MainFrame 实例，也就是一个 JFrame
     }
 
-    public void show() {
-        mainFrame.setVisible(true);
+    public void showFrame() {
+        setVisible(true); // 调用 JFrame 的 setVisible 方法
     }
-
-
 }

@@ -22,7 +22,7 @@ public class UIManagerSetup {
 
         // 创建并显示主窗体
         MainFrame mainFrame = new MainFrame();
-        mainFrame.show(); // 确保调用此方法
+        mainFrame.showFrame(); // 确保调用此方法
     }
 
 }
