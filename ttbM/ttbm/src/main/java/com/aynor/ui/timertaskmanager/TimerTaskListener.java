@@ -1,4 +1,5 @@
-package com.aynor.ui.timertasks;
+// 这个接口连接 TimerTaskManager 
+package com.aynor.ui.timertaskmanager;
 
 import com.aynor.ui.panelcontent.TimerTaskPanel;
 
