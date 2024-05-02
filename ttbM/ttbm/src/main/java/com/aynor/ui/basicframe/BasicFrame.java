@@ -1,6 +1,7 @@
 // BasicFrame 
 // 作为主窗口框架，包含所有其他面板。
 // 管理窗口尺寸的调整。
+// 使用 BaseMainPanel, 填入frame中 
 package com.aynor.ui.basicframe;
 
 // import javax.swing.BoxLayout;
