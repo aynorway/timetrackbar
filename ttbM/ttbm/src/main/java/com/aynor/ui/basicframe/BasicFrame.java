@@ -19,14 +19,14 @@ public class BasicFrame extends JFrame {
 
     public BasicFrame() {
         super("TimeTrackBar Application"); // 正确的super调用. super 调用父类构造器只能在子类构造器的第一行使用。
-        System.out.println("--- \n 设置 MainFrame UI...\n---");
+        System.out.println("——————————————\n UI 设置 BasicFrame ...\n---");
         setupMainFrame();
         setupTaskPanel();
         setupMenu();
     }
 
     private void setupMainFrame() {
-        System.out.println("--- \n 设置 底框 frame ...\n---");
+        System.out.println("--- \n UI 设置 底框 setupMainFrame ...\n---");
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(900, 70); // 设置窗口大小
@@ -34,7 +34,7 @@ public class BasicFrame extends JFrame {
     }
 
     private void setupTaskPanel() {
-        System.out.println("--- \n 设置 面板 BaseMainPanel ...\n---");
+        System.out.println("--- \n UI 设置 面板 setupTaskPanel ...\n---");
 
         taskPanel = new BasicPanel(); // 使用 BaseMainPanel
         add(taskPanel, BorderLayout.CENTER); // 使用this.add也是可以的，this通常被省略
@@ -42,7 +42,7 @@ public class BasicFrame extends JFrame {
 
     // 调用 MenuSetup
     private void setupMenu() {
-        System.out.println("--- \n 设置 菜单栏 Menu ...\n---");
+        System.out.println("--- \n UI 设置 菜单栏 setupMenu ...\n---");
 
         MenuSetup menuSetup;
         String os = System.getProperty("os.name").toLowerCase();
