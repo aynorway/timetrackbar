@@ -12,17 +12,14 @@ import javax.swing.JPanel;
 // import com.aynor.ui.mainframe.MainFrame; 
 
 public class WestPanel extends JPanel {
-    private JButton addButton;
-    private JButton removeButton;
+    private JButton controlButton;
 
     public WestPanel () {
         setLayout(new FlowLayout());
 
-        addButton = new JButton("Add Task");
-        removeButton = new JButton("Remove Task");
+        controlButton = new JButton("Add Task");
 
-        add(addButton);
-        add(removeButton);
+        add(controlButton);
     }
 }
 

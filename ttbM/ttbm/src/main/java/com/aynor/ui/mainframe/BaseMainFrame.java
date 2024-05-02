@@ -27,7 +27,7 @@ public class BaseMainFrame extends JFrame {
         System.out.println("--- \n 设置 MainFrame UI...\n---");
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(900, 170); // 设置窗口大小
+        setSize(900, 70); // 设置窗口大小
         setLocationRelativeTo(null); // 居中显示
     }
 
