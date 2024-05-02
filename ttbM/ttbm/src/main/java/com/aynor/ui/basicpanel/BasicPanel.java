@@ -1,23 +1,23 @@
-// BaseMainPanel.java 这里是一个面板类, 整合和包括所有 东南西北中 5个panels. 
-package com.aynor.ui.mainpanel;
+// BasicPanel.java 这里是一个面板类, 整合和包括所有 东南西北中 5个panels. 
+package com.aynor.ui.basicpanel;
 
 import java.awt.BorderLayout;
 
 // import javax.swing.JButton;
 import javax.swing.JPanel;
 
-import com.aynor.ui.mainpanel.panelcontent.center.CenterPanel;
-import com.aynor.ui.mainpanel.panelcontent.east.EastPanel;
-import com.aynor.ui.mainpanel.panelcontent.west.WestPanel;
+import com.aynor.ui.basicpanel.panelcontent.center.CenterPanel;
+import com.aynor.ui.basicpanel.panelcontent.east.EastPanel;
+import com.aynor.ui.basicpanel.panelcontent.west.WestPanel;
 
-public class BaseMainPanel extends JPanel {
+public class BasicPanel extends JPanel {
     // private NorthPanel northPanel;
     // private SouthPanel southPanel;
     private EastPanel eastPanel;
     private WestPanel westPanel;
     private CenterPanel centerPanel;
 
-    public BaseMainPanel() {
+    public BasicPanel() {
         this.setLayout(new BorderLayout());
         // northPanel = new NorthPanel();
         // southPanel = new SouthPanel();

@@ -1,4 +1,4 @@
-package com.aynor.ui.mainpanel.panelcontent.west;
+package com.aynor.ui.basicpanel.panelcontent.west;
 
 import javax.swing.JTextField;
 import javax.swing.text.AbstractDocument;

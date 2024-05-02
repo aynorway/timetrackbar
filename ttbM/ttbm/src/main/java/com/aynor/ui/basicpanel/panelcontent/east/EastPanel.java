@@ -1,4 +1,4 @@
-package com.aynor.ui.mainpanel.panelcontent.east;
+package com.aynor.ui.basicpanel.panelcontent.east;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;

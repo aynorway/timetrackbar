@@ -1,5 +1,7 @@
-// APP 初始的 Basic MainFrame 及调用 panel 
-package com.aynor.ui.mainframe;
+// BasicFrame（位于basicframe目录）
+// 作为主窗口框架，包含所有其他面板。
+// 管理窗口尺寸的调整。
+package com.aynor.ui.basicframe;
 
 // import javax.swing.BoxLayout;
 import javax.swing.JFrame;
@@ -9,13 +11,13 @@ import java.awt.BorderLayout;
 import com.aynor.menu.menusetup.MacOSMenuSetup;
 import com.aynor.menu.menusetup.MenuSetup;
 import com.aynor.menu.menusetup.WindowsMenuSetup;
-import com.aynor.ui.mainpanel.BaseMainPanel;
+import com.aynor.ui.basicpanel.BasicPanel;
 
 // 主窗体类 
-public class BaseMainFrame extends JFrame {
+public class BasicFrame extends JFrame {
     private JPanel taskPanel;
 
-    public BaseMainFrame() {
+    public BasicFrame() {
         super("TimeTrackBar Application"); // 正确的super调用. super 调用父类构造器只能在子类构造器的第一行使用。
         System.out.println("--- \n 设置 MainFrame UI...\n---");
         setupMainFrame();
@@ -34,7 +36,7 @@ public class BaseMainFrame extends JFrame {
     private void setupTaskPanel() {
         System.out.println("--- \n 设置 面板 BaseMainPanel ...\n---");
 
-        taskPanel = new BaseMainPanel(); // 使用 BaseMainPanel 
+        taskPanel = new BasicPanel(); // 使用 BaseMainPanel
         add(taskPanel, BorderLayout.CENTER); // 使用this.add也是可以的，this通常被省略
     }
 

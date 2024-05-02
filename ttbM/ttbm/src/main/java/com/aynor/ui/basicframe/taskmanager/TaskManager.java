@@ -1,32 +1,32 @@
-// TimerTaskManager.java 管理是否事增加任务还是减少一个任务, 相对应的增加活加少frame的size  
-package com.aynor.ui.mainframe.timertaskmanager;
+// TaskManager（位于basicframe/taskmanager目录）
+// 调整BasicFrame的尺寸以适应任务行的增减。
+// 负责管理所有的BasicPanel实例（任务行），包括添加和删除操作。
+package com.aynor.ui.basicframe.taskmanager;
 
-import com.aynor.ui.mainframe.BaseMainFrame;
-import com.aynor.ui.mainpanel.BaseMainPanel;
+import com.aynor.ui.basicframe.BasicFrame;
+import com.aynor.ui.basicpanel.BasicPanel;
 
 import javax.swing.JPanel;
 
-public class TimerTaskManager implements TimerTaskListener {
-    private BaseMainFrame mainFrame;
+public class TaskManager {
+    private BasicFrame mainFrame;
     private JPanel taskPanel;
 
-    public TimerTaskManager(BaseMainFrame aMainFrame, JPanel taskPanel) {
+    public TaskManager(BasicFrame aMainFrame, JPanel taskPanel) {
         this.mainFrame = aMainFrame;
         this.taskPanel = taskPanel;
     }
 
     // 要确保 MainFrame.java 继承 extends JFrame
-    @Override
     public void addNewTimerTask(boolean isFirst) {
-        BaseMainPanel timerTask = new BaseMainPanel();
+        BasicPanel timerTask = new BasicPanel();
         taskPanel.add(timerTask);
         mainFrame.setSize(900, mainFrame.getHeight() + 45);
         mainFrame.revalidate();
         mainFrame.repaint();
     }
 
-    @Override
-    public void removeTimerTask(BaseMainPanel timerTask) {
+    public void removeTimerTask(BasicPanel timerTask) {
         taskPanel.remove(timerTask);
         mainFrame.setSize(900, mainFrame.getHeight() - 45);
         mainFrame.revalidate();
