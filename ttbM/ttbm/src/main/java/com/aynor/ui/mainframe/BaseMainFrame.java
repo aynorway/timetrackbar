@@ -24,7 +24,7 @@ public class BaseMainFrame extends JFrame {
     }
 
     private void setupMainFrame() {
-        System.out.println("--- \n 设置 MainFrame UI...\n---");
+        System.out.println("--- \n 设置 底框 frame ...\n---");
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(900, 70); // 设置窗口大小
@@ -32,15 +32,15 @@ public class BaseMainFrame extends JFrame {
     }
 
     private void setupTaskPanel() {
-        System.out.println("--- \n 设置 setupTaskPanel UI...\n---");
+        System.out.println("--- \n 设置 面板 BaseMainPanel ...\n---");
 
-        taskPanel = new BaseMainPanel(); // 使用 TimerTaskPanel
+        taskPanel = new BaseMainPanel(); // 使用 BaseMainPanel 
         add(taskPanel, BorderLayout.CENTER); // 使用this.add也是可以的，this通常被省略
     }
 
     // 调用 MenuSetup
     private void setupMenu() {
-        System.out.println("--- \n 设置 setupMenu UI...\n---");
+        System.out.println("--- \n 设置 菜单栏 Menu ...\n---");
 
         MenuSetup menuSetup;
         String os = System.getProperty("os.name").toLowerCase();
