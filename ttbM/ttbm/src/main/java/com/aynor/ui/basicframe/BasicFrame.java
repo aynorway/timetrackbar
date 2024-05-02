@@ -1,4 +1,4 @@
-// BasicFrame（位于basicframe目录）
+// BasicFrame 
 // 作为主窗口框架，包含所有其他面板。
 // 管理窗口尺寸的调整。
 package com.aynor.ui.basicframe;

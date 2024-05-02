@@ -1,7 +1,7 @@
-// TaskManager（位于basicframe/taskmanager目录）
+// TaskManager 
 // 调整BasicFrame的尺寸以适应任务行的增减。
 // 负责管理所有的BasicPanel实例（任务行），包括添加和删除操作。
-package com.aynor.ui.basicframe.taskmanager;
+package com.aynor.ui.taskmanager;
 
 import com.aynor.ui.basicframe.BasicFrame;
 import com.aynor.ui.basicpanel.BasicPanel;
