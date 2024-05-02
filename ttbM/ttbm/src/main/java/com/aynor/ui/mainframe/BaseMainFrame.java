@@ -9,7 +9,7 @@ import java.awt.BorderLayout;
 import com.aynor.menu.menusetup.MacOSMenuSetup;
 import com.aynor.menu.menusetup.MenuSetup;
 import com.aynor.menu.menusetup.WindowsMenuSetup;
-import com.aynor.ui.panelcontent.TimerTaskPanel;
+import com.aynor.ui.mainpanel.BaseMainPanel;
 
 // 主窗体类 
 public class BaseMainFrame extends JFrame {
@@ -34,11 +34,11 @@ public class BaseMainFrame extends JFrame {
     private void setupTaskPanel() {
         System.out.println("--- \n 设置 setupTaskPanel UI...\n---");
 
-        taskPanel = new TimerTaskPanel(); // 使用 TimerTaskPanel
+        taskPanel = new BaseMainPanel(); // 使用 TimerTaskPanel
         add(taskPanel, BorderLayout.CENTER); // 使用this.add也是可以的，this通常被省略
     }
 
-    // 调用 MenuSetup 
+    // 调用 MenuSetup
     private void setupMenu() {
         System.out.println("--- \n 设置 setupMenu UI...\n---");
 
@@ -50,7 +50,8 @@ public class BaseMainFrame extends JFrame {
             menuSetup = new WindowsMenuSetup();
         } else {
             // 对于其他未知操作系统，可能不提供特定的菜单设置
-            menuSetup = frame -> {}; 
+            menuSetup = frame -> {
+            };
         }
         menuSetup.setupMenu(this); // 应该传递 this，因为 this 代表的是 MainFrame 实例，也就是一个 JFrame
     }

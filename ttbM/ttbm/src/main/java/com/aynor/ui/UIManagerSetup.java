@@ -18,7 +18,8 @@ public class UIManagerSetup {
         UIFontManager.setDefaultUIFont(f);
 
         // 打印字体信息
-        System.out.println("--- \n Font set to: \n " + f.getFontName() + ", Style: " + f.getStyle() + ", Size: " + f.getSize() + "\n---");
+        System.out.println("--- \n Font set to: \n " + f.getFontName() + ", Style: " + f.getStyle() + ", Size: "
+                + f.getSize() + "\n---");
 
         // 创建并显示主窗体
         BaseMainFrame mainFrame = new BaseMainFrame();

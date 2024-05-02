@@ -1,5 +1,4 @@
-package com.aynor.ui.panelcontent.west;
-
+package com.aynor.ui.mainpanel.panelcontent.west;
 
 import javax.swing.JTextField;
 import javax.swing.text.AbstractDocument;
@@ -17,7 +16,7 @@ import java.awt.event.MouseEvent;
 
 public class ClearableTextField extends JTextField {
 
-    private final String CLEAR_ICON = "\u2715"; // ✕ \u2715 
+    private final String CLEAR_ICON = "\u2715"; // ✕ \u2715
     private boolean showIcon = false;
     private boolean hoverOverTextField = false;
 

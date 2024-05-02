@@ -1,5 +1,5 @@
 // WestPanel.java 包括按键部分(调用addNewTimerTask 和removeTimerTask) 和文字框部分 
-package com.aynor.ui.panelcontent.west;
+package com.aynor.ui.mainpanel.panelcontent.west;
 
 // import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 public class WestPanel extends JPanel {
     private JButton controlButton;
 
-    public WestPanel () {
+    public WestPanel() {
         setLayout(new FlowLayout());
 
         controlButton = new JButton("Add Task");
@@ -22,4 +22,3 @@ public class WestPanel extends JPanel {
         add(controlButton);
     }
 }
-
