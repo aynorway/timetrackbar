@@ -1,4 +1,7 @@
-// BasicPanel.java 这里是一个面板类, 整合和包括所有 东南西北中 5个panels. 
+// BasicPanel.java 
+// * 表示单个任务的面板。
+// * 整合和包括 所有 东、南、西、北、中, 5个panels 文件. 
+// * 注: 5个panels文件中, 包含任务相关的控件和操作逻辑，例如开始、停止计时等。
 package com.aynor.ui.basicpanel;
 
 import java.awt.BorderLayout;

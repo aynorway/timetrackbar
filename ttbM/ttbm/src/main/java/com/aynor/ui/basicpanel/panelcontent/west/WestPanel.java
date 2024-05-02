@@ -9,6 +9,8 @@ import java.awt.FlowLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
+// import com.aynor.ui.taskmanager.TaskManager;
+
 public class WestPanel extends JPanel {
     private JButton addButton;
     private JButton removeButton;
